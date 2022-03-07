@@ -1,0 +1,68 @@
+<div class="container px-1 mt-3">
+  <div class="row ">
+    <div class="col-md-9 ">
+      <div class="row">
+        <div class="col d-flex justify-content-end">
+          <input type="text" class="form-control w-50"
+                 (keyup.enter)="filterByName($event)" #name
+                 >
+          <button class="btn btn-primary" (click)=" name.value=' '">Clear Input </button>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="row mt-3" >
+
+        <table class="table" style="border: 1px solid black;">
+          <thead>
+          <tr>
+
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of users| paginate: { id: 'users',
+                                                      itemsPerPage: 20,
+                                                      currentPage: currentPage,
+                                                      totalItems: total }">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.status}}</td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="viewPostsOfUser(user)"
+                      >
+                View Posts
+              </button>
+
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+
+
+
+        <div class="text-center">
+          <pagination-controls (pageChange)="onPageChane($event)" id="users"></pagination-controls>
+
+        </div>
+
+    </div>
+
+  </div>
+    <div class="col-md-3">
+      <div class="p-3 border ">
+        <app-latest-viewed-users></app-latest-viewed-users>
+      </div>
+    </div>
+</div>
+
+</div>
