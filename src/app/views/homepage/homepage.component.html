@@ -2,13 +2,16 @@
   <div class="row ">
     <div class="col-md-9 ">
       <div class="row">
-        <div class="col d-flex justify-content-end">
-          <input type="text" class="form-control w-50"
-                 (keyup.enter)="filterByName($event)" #name
-                 >
-          <button class="btn btn-primary" (click)=" name.value=' '">Clear Input </button>
+        <div class="col-12">
+          <div class="col d-flex justify-content-end">
+            <input type="text" class="form-control w-75"
+                   (keyup.enter)="filterByName($event)" #name
+            >
+            <button class="btn btn-primary" (click)=" name.value=' '">Clear Input </button>
 
+          </div>
         </div>
+
       </div>
 
 
