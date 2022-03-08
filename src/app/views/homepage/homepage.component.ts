@@ -33,7 +33,7 @@ this.getUsers();
     this.router.navigateByUrl('/posts?userId=' + user.id).then();
   }
 
-  onPageChane(page: number) {
+  onPageChange(page: number) {
     this.currentPage=page;
     this.getUsers(this.currentPage);
 
