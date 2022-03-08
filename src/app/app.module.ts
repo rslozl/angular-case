@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -15,7 +14,6 @@ import {FormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
-    MainLayoutComponent,
     HeaderComponent,
     HomepageComponent,
     PostsComponent,
