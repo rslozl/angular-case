@@ -1,4 +1,4 @@
-<div class="container px-1 mt-3">
+<div class="container  mt-3">
   <div class="row ">
     <div class="col-md-9 ">
       <div class="row">
@@ -7,22 +7,15 @@
             <input type="text" class="form-control w-75"
                    (keyup.enter)="filterByName($event)" #name
             >
-            <button class="btn btn-primary" (click)=" name.value=' '">Clear Input </button>
+            <button class="btn btn-primary" (click)=" name.value=' '">Clear Input</button>
 
           </div>
         </div>
-
       </div>
-
-
-
-
-      <div class="row mt-3" >
-
+      <div class="row mt-3">
         <table class="table" style="border: 1px solid black;">
           <thead>
           <tr>
-
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Gender</th>
@@ -41,7 +34,7 @@
             <td>{{user.status}}</td>
             <td>
               <button type="button" class="btn btn-primary" (click)="viewPostsOfUser(user)"
-                      >
+              >
                 View Posts
               </button>
 
@@ -52,20 +45,19 @@
         </table>
 
 
-
         <div class="text-center">
           <pagination-controls (pageChange)="onPageChange($event)" id="users"></pagination-controls>
 
         </div>
 
-    </div>
+      </div>
 
-  </div>
+    </div>
     <div class="col-md-3">
       <div class="p-3 border ">
         <app-latest-viewed-users></app-latest-viewed-users>
       </div>
     </div>
-</div>
+  </div>
 
 </div>
