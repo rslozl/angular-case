@@ -43,7 +43,7 @@ this.getUsers();
     this.getUsers(0,$event.target.value);
     setTimeout(function(){
       window.location.reload();
-    },3000);
+    },8000);
 
   }
 }
